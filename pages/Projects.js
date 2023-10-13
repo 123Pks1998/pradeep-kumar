@@ -19,13 +19,13 @@ const Projects = () => {
                             <img src="/pks.png" alt="pp" className='md:w-96 w-80  h-60 rounded-md' />
                         </div>
 
-                        <div className='md:ml-0  md:w-96 h-auto p-2  md:text-right font-serif text-white'>
+                        <div className='md:ml-0 -ml-2 md:w-96 md:flex-none lg:float-none flex-col h-auto p-2 md:text-right font-serif text-white'>
                             <div>
                                 <h1 className='text-2xl md:mt-0 mt-2 h-8 font-medium capitalize'>booksmart</h1>
                                 <p className='text-sm capitalize line-clamp-4 rounded-md bg-slate-950 md:-ml-4 md:w-96 w-80 p-2 h-32 md:h-auto mt-4'>Text messaging, or texting, is the act of composing and sending electronic messages, typically consisting of alphabetic and numeric characters, between two or more users of mobile devices, desktops/laptops, </p>
                             </div>
 
-                            <div className='flex mt-4 capitalize md:justify-end gap-2'>
+                            <div className=' md:flex lg:flex flex-wrap mt-4 capitalize md:justify-end gap-2'>
                                 <p>javaScript</p>
                                 <p>next js</p>
                                 <p>node auth</p>
@@ -48,7 +48,7 @@ const Projects = () => {
                             <img src="/pks.png" alt="pp" className='md:w-96 w-80  h-60 rounded-md' />
                         </div>
 
-                        <div className='md:ml-0  md:w-96 h-auto p-2   md:text-right font-serif text-white'>
+                        <div className='md:ml-0 -ml-2 md:w-96 h-auto p-2   md:text-right font-serif text-white'>
                             <div>
                                 <h1 className='text-2xl md:mt-0 mt-2 h-8 font-medium capitalize'>booksmart</h1>
                                 <p className='text-sm capitalize line-clamp-4 h-32 md:h-auto rounded-md bg-slate-950 md:-ml-4 md:w-96 w-80 p-2  mt-4'>Text messaging, or texting, is the act of composing and sending electronic messages, typically consisting of alphabetic and numeric characters, between two or more users of mobile devices, desktops/laptops, </p>
