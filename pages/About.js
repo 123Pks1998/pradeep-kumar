@@ -10,7 +10,7 @@ const About = () => {
 
         <motion.div initial={{ y: 10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.7, delay: 0.4 }} className='md:flex  ml-14 md:my-20  my-8 '>
+            transition={{ duration: 0.7, delay: 0.4 }} className='md:flex  md:ml-14 lg:ml-14 ml-10 md:my-20  my-8 '>
             <div className='md:w-3/5 text-white '>
                 <div>
                     <h1 className='font-serif font-semibold text-xl '>About Me</h1>

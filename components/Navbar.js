@@ -3,14 +3,14 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 const Navbar = () => {
     return (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} className=' flex justify-between rounded-none h-10  bg-zinc-800 shadow-orange-300 shadow-lg sticky top-0' >
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} className=' flex justify-between rounded-none h-12  bg-zinc-800 shadow-orange-300 shadow-lg sticky top-0' >
             <div className='md:mx-6 '>
                 <Link href='/'>
-                    <p className='md:ml-0 ml-2 text-white hover:shadow-orange-400  font-semibold rounded-xl text-center h-8 w-8 mt-1 hover:text-green-50   shadow-white shadow-inner text-2xl'>P</p>
+                    <p className='md:ml-0 ml-2 text-white hover:shadow-orange-400  font-semibold rounded-xl text-center h-8 w-8 md:mt-2 lg:mt-2 mt-2 hover:text-green-50   shadow-white shadow-inner text-2xl'>PK</p>
                 </Link>
             </div>
 
-            <div className='md:mx-6 mx-2 md:w-96 w-auto py-2 text-slate-300 text-md font-serif  justify-between flex'>
+            <div className='md:mx-6 mx-2 md:w-96 w-64 py-3 text-slate-300 text-lg font-serif  justify-between flex'>
                 <motion.div initial={{ x: 10, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.1 }}>
