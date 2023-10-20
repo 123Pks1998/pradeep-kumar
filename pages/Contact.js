@@ -18,7 +18,7 @@ const Contact = () => {
                     </div>
                     <div className='ml-4 md:w-3/4 md:mt-4 mt-6 flex justify-between text-center'>
                         <div>
-                            <p>Whats'up:-</p>
+                            <p>Call & Whats'up:-</p>
                             <p>9817530061</p>
                         </div>
                         <div>

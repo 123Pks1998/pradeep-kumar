@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 const Navbar = () => {
     return (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} className=' flex justify-between rounded-none h-12  bg-zinc-800 shadow-orange-300 shadow-lg sticky top-0' >
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} className=' flex justify-between rounded-none h-12 hover:bg-zinc-900 bg-zinc-800 shadow-orange-300 shadow-lg sticky top-0 hover:shadow-orange-400' >
             <div className='md:mx-6 '>
                 <Link href='/'>
                     <p className='md:ml-0 ml-2 text-white hover:shadow-orange-400  font-semibold rounded-xl text-center h-8 w-8 md:mt-2 lg:mt-2 mt-2 hover:text-green-50   shadow-white shadow-inner text-2xl'>PK</p>
