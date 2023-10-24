@@ -14,7 +14,7 @@ const Contact = () => {
                         <h1 className=' text-3xl font-semibold'>Get In Touch</h1>
                     </div>
                     <div className='md:w-3/4  text-center ml-4 md:mt-4 mt-2'>
-                        <p>Although, I'm not currently looking for any new opportunities, my inbox is always open.whether you have ant question or just want to say hi, I'll try to get back to you as soon as possible.</p>
+                        <p>Although, I'm currently looking for new opportunities, my inbox is always open. whether you have any question or just want to say hi, I'll try to get back to you as soon as possible.</p>
                     </div>
                     <div className='ml-4 md:w-3/4 md:mt-4 mt-6 flex justify-between text-center'>
                         <div>
