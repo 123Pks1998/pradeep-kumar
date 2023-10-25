@@ -18,7 +18,7 @@ const OtherProject = () => {
                     <div className='w-2/4 my-14 '>
 
                         <div className=' w-96 border p-1 rounded-md'>
-                            <div className='flex justify-center '>
+                            <div className=' '>
                                 <img src="/portfolio.png" alt="pp" className='md:w-96 w-80 h-60 rounded-md' />
                             </div>
 
