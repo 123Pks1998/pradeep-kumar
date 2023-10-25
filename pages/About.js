@@ -62,26 +62,26 @@ const About = () => {
                     </div>
                     <hr className='w-52' />
                     <div className='gap-10 flex'>
-                        <td>read</td>
-                        <td>read</td>
-                        <td>read</td>
+                        <div>read</div>
+                        <div>read</div>
+                        <div>read</div>
                     </div>
                     <div className='gap-9 flex'>
-                        <td>write</td>
-                        <td>write</td>
-                        <td>no</td>
+                        <div>write</div>
+                        <div>write</div>
+                        <div>no</div>
                     </div>
                     <div className='gap-8 flex'>
-                        <td>speak</td>
-                        <td>speak</td>
-                        <td>speak</td>
+                        <div>speak</div>
+                        <div>speak</div>
+                        <div>speak</div>
                     </div>
 
 
                 </div>
             </div>
-            <hr />
-            <div className='md:ml-14 lg:ml-14 ml-10 md:my-28 capitalize font-serif text-white '>
+            <hr className='my-2' />
+            <div className='md:ml-14 lg:ml-14 ml-10 md:my-20 mb-10 mt-4 capitalize font-serif text-white '>
                 <h1 className='text-lg font-semibold mb-2'>hobbies :-</h1>
                 <p>1. poetry writing</p>
                 <p>2. playing chess</p>
