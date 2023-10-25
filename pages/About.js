@@ -11,7 +11,7 @@ const About = () => {
         <motion.div initial={{ y: 10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.4 }} >
-            <div className='md:flex  md:ml-14 lg:ml-14 ml-10 md:my-20  my-8 mb-4'>
+            <div className='md:flex  md:ml-14 lg:ml-14 ml-10 md:my-20  my-8 '>
                 <div className='md:w-3/5 text-white '>
                     <div>
                         <h1 className='font-serif font-semibold text-xl mb-4'>About Me</h1>
@@ -81,7 +81,7 @@ const About = () => {
                 </div>
             </div>
             <hr />
-            <div className='md:ml-14 lg:ml-14 ml-10 md:my-20 capitalize font-serif text-white '>
+            <div className='md:ml-14 lg:ml-14 ml-10 md:my-28 capitalize font-serif text-white '>
                 <h1 className='text-lg font-semibold mb-2'>hobbies :-</h1>
                 <p>1. poetry writing</p>
                 <p>2. playing chess</p>
