@@ -12,22 +12,22 @@ const OtherProject = () => {
             transition={{ duration: 0.7, delay: 0.2 }} className=' my-20'>
             <h1 className=' text-white  text-center font-serif font-semibold text-2xl capitalize underline '>the things i have made.</h1>
 
-            <div className='container mx-28 '>
-                <div className=' flex  flex-wrap my-8'>
+            <div className='container md:mx-auto lg:mx-28'>
+                <div className=' md:flex justify-center lg:flex xl:flex my-8 gap-4 '>
 
-                    <div className='w-2/4 my-14'>
+                    <div className='w-2/4 my-14 '>
 
-                        <div className='w-96 border p-1 rounded-md'>
-                            <div className=' '>
+                        <div className=' w-96 border p-1 rounded-md'>
+                            <div className='flex justify-center '>
                                 <img src="/portfolio.png" alt="pp" className='md:w-96 w-80 h-60 rounded-md' />
                             </div>
 
-                            <h1 className='text-2xl md:mt-0 h-8 font-medium capitalize text-white'>Portfolio</h1>
+                            <h1 className='flex justify-center text-2xl md:mt-0 h-8 font-medium capitalize text-white'>Portfolio</h1>
 
                             <div className='md:ml-0 ml-8 md:w-4/4 h-auto md:text-left font-serif text-white'>
                                 <div>
 
-                                    <p className='text-sm capitalize line-clamp-5 rounded-md bg-gray-950  md:w-auto w-96 p-1 mt-2'>portfolio that is made by using next js javaScript framework. this is responsive for all gadgets. </p>
+                                    <p className='text-sm capitalize line-clamp-5 rounded-md bg-gray-950  md:w-auto w-80 p-1 mt-2'>portfolio that is made by using next js javaScript framework. this is responsive for all gadgets. </p>
                                 </div>
 
                                 <div className='flex-wrap flex  mt-4 capitalize md:justify-start  gap-4'>
@@ -51,16 +51,16 @@ const OtherProject = () => {
                     <div className='w-2/4 my-14'>
 
                         <div className='w-96 border p-1 rounded-md'>
-                            <div className=' '>
+                            <div className='flex justify-center '>
                                 <img src="/gotogether.png" alt="pp" className='md:w-96 w-80 h-60 rounded-md' />
                             </div>
 
-                            <h1 className='text-2xl md:mt-0 h-8 font-medium capitalize text-white'>gotogether</h1>
+                            <h1 className='flex justify-center text-2xl md:mt-0 h-8 font-medium capitalize text-white'>gotogether</h1>
 
                             <div className='md:ml-0 ml-8 md:w-4/4 h-auto md:text-left font-serif text-white'>
                                 <div>
 
-                                    <p className='text-sm capitalize line-clamp-5 rounded-md bg-gray-950  md:w-auto w-96 p-1 mt-2'>This one is responsive frontend of blogging web app.that is created using react js library. suitable of tablets, pcs & mobile phones.</p>
+                                    <p className='text-sm capitalize line-clamp-5 rounded-md bg-gray-950  md:w-auto w-80 p-1 mt-2'>This one is responsive frontend of blogging web app.that is created using react js library. suitable of tablets, pcs & mobile phones.</p>
                                 </div>
 
                                 <div className='flex flex-wrap mt-4 capitalize md:justify-start  gap-4'>
