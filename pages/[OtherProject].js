@@ -9,7 +9,7 @@ const OtherProject = () => {
     return (
         <motion.div initial={{ y: 10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.7, delay: 0.2 }} className=' my-20 mb-4'>
+            transition={{ duration: 0.7, delay: 0.2 }} className=' my-20'>
             <h1 className=' text-white  text-center font-serif font-semibold text-2xl capitalize underline '>the things i have made.</h1>
 
             <div className='container md:mx-auto lg:mx-28 '>
