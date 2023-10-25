@@ -24,7 +24,7 @@ const OtherProject = () => {
 
                             <h1 className='flex justify-center text-2xl md:mt-0 h-8 font-medium capitalize text-white'>Portfolio</h1>
 
-                            <div className='md:ml-0 ml-8 md:w-4/4 h-auto md:text-left font-serif text-white'>
+                            <div className=' md:w-4/4 h-auto md:text-left font-serif text-white'>
                                 <div>
 
                                     <p className='text-sm capitalize line-clamp-5 rounded-md bg-gray-950  md:w-auto w-80 p-1 mt-2'>portfolio that is made by using next js javaScript framework. this is responsive for all gadgets. </p>
