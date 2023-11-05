@@ -11,7 +11,7 @@ const Social = () => {
 
             <motion.a initial={{ x: 10, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.8 }} href="https://github.com/123Pks1998" target='blank'><AiOutlineGithub className='mt-8 shadow-orange-300 hover:bg-orange-500 shadow-sm rounded-sm' /></motion.a>
+                transition={{ duration: 0.5, delay: 0.8 }} href="https://github.com/123Pks1998?tab=repositories" target='blank'><AiOutlineGithub className='mt-8 shadow-orange-300 hover:bg-orange-500 shadow-sm rounded-sm' /></motion.a>
 
             <motion.a initial={{ x: 10, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
