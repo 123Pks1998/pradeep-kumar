@@ -23,6 +23,7 @@ const About = () => {
                         <h1 className='font-sans font-medium text-md mt-12 capitalize'>technology that, i have been working with recently.</h1>
                         <div className='w-56 flex justify-between font-serif capitalize text-md j mt-4'>
                             <div>
+                                <p>mysql</p>
                                 <p>html5</p>
                                 <p>next js</p>
                                 <p>react js</p>
@@ -30,6 +31,7 @@ const About = () => {
                             </div>
 
                             <div>
+                                <p>linux</p>
                                 <p>node js</p>
                                 <p>mongo DB</p>
                                 <p>express js</p>
