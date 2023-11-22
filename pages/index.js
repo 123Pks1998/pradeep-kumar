@@ -12,7 +12,7 @@ export default function Home() {
             <div className="pl-4 py-2 text-white  ">
               <h4 className="font-serif ">Hi, my name is</h4>
               <h1 className="font-serif font-semibold text-5xl mt-2">Pradeep Kumar</h1>
-              <h1 className="font-serif md:w-96 mt-2">i have strong knowledge of MySql & Linux ,I am also a web developer of <u>Mern stack</u> & <u>Next js</u>. i have strong knowledge in front-end & back-end development with user-friendly and responsive web application.</h1>
+              <h1 className="font-serif md:w-96 mt-2">I am a web developer with 1 year experience of <u>Mern stack</u> & <u>Next js</u>. i have strong knowledge in front-end & back-end development with user-friendly and responsive web application.</h1>
             </div>
             <div className="mt-4 md:w-64  font-mono text-sm">
               <div className="ml-4 md:mr-1 md:justify-center">
