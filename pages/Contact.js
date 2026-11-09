@@ -63,12 +63,14 @@ const Contact = () => {
 
                 {/* Say Hello Button */}
                 <div className='w-full md:w-3/4 my-8 text-center'>
-                    <Link
-                        href='mailto:pks28697@gmail.com'
+                    <a
+                        href='https://mail.google.com/mail/?view=cm&fs=1&to=pks28697@gmail.com'
+                        target='_blank'
+                        rel='noopener noreferrer'
                         className='inline-block px-4 py-2 rounded-sm shadow-md shadow-orange-300 hover:shadow-orange-400 hover:text-orange-300 transition-all'
                     >
                         Say Hello
-                    </Link>
+                    </a>
                 </div>
 
             </div>
