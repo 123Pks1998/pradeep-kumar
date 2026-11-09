@@ -1,42 +1,86 @@
 import React from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { motion,AnimatePresence } from 'framer-motion'
+import { useState } from "react";
+
+
 const Navbar = () => {
-    return (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} className=' flex justify-between rounded-none h-12 hover:bg-zinc-900 bg-zinc-800 shadow-orange-300 shadow-lg sticky top-0 hover:shadow-orange-400' >
-            <div className='md:mx-6 '>
-                <Link href='/'>
-                    <p className='md:ml-0 ml-2 text-white hover:shadow-orange-400  font-semibold rounded-xl text-center h-8 w-8 md:mt-2 lg:mt-2 mt-2 hover:text-green-50   shadow-white shadow-inner text-2xl'>PK</p>
-                </Link>
-            </div>
+  const [isOpen, setIsOpen] = useState(false);
 
-            <div className='md:mx-6 mx-2 md:w-96 w-64 py-3 text-slate-300 text-lg font-serif  justify-between flex'>
-                <motion.div initial={{ x: 10, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{ duration: 0.8, delay: 0.1 }}>
+  const navLinks = [
+    { name: "Home", path: "/" },
+    { name: "Projects", path: "/Projects" },
+    { name: "Experience", path: "/Experience" },
+    { name: "Contact", path: "/Contact" },
+    { name: "About", path: "/About" },
+  ];
 
-                    <Link href='/Projects' className='px-1 focus:text-green-400 focus:shadow-md focus:shadow-green-400 hover:shadow-md hover:shadow-orange-300 rounded-sm '>Projects</Link></motion.div>
+  return (
+    
+<motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 0.5 }}
+  className="relative w-full min-w-0 max-w-full box-border flex items-center justify-between px-3 md:px-6 h-12 bg-zinc-800 hover:bg-zinc-900 shadow-lg shadow-orange-300 sticky top-0 z-50 overflow-visible hover:shadow-orange-400"
+>
+  {/* Logo */}
+  <Link href="/" onClick={() => setIsOpen(false)} className="shrink-0">
+    <p className="text-white font-semibold rounded-xl text-center h-8 w-8 mt-2 shadow-white shadow-inner text-xl">
+      PK
+    </p>
+  </Link>
+
+  {/* Desktop Menu */}
+  <div className="hidden md:flex items-center gap-6 text-slate-300 text-lg font-serif">
+    {navLinks.map((item) => (
+      <Link
+        key={item.name}
+        href={item.path}
+        className="px-1 hover:shadow-md hover:shadow-orange-300 rounded-sm"
+      >
+        {item.name}
+      </Link>
+    ))}
+  </div>
+
+  {/* Mobile Menu Button */}
+  <button
+    onClick={() => setIsOpen(!isOpen)}
+    className="md:hidden shrink-0 text-white text-2xl px-2"
+    aria-label="Toggle navigation menu"
+    aria-expanded={isOpen}
+  >
+    {isOpen ? "✕" : "☰"}
+  </button>
+
+  {/* Mobile Dropdown */}
+  <AnimatePresence>
+    {isOpen && (
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -10 }}
+        transition={{ duration: 0.2 }}
+        className="absolute top-12 left-0 right-0 w-auto box-border bg-zinc-800 shadow-lg shadow-orange-300 md:hidden flex flex-col items-center py-3 gap-4 text-slate-300 text-lg font-serif"
+      >
+        {navLinks.map((item) => (
+          <Link
+            key={item.name}
+            href={item.path}
+            onClick={() => setIsOpen(false)}
+            className="w-full text-center py-1 hover:text-green-400 hover:bg-zinc-700"
+          >
+            {item.name}
+          </Link>
+        ))}
+      </motion.div>
+    )}
+  </AnimatePresence>
+</motion.div>
+
+  );
+};
 
 
-                {/* <motion.div initial={{ x: 10, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{ duration: 0.5, delay: 0.3 }}>
-                    <Link href='/Experience' className='px-1 focus:text-green-400 focus:shadow-md focus:shadow-green-400 hover:shadow-md  hover:shadow-orange-300 rounded-sm '>Experience</Link> </motion.div> */}
-
-                <motion.div initial={{ x: 10, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{ duration: 0.5, delay: 0.5 }}>
-                    <Link href='/Contact' className='px-1 focus:text-green-400 focus:shadow-md focus:shadow-green-400 hover:shadow-md  hover:shadow-orange-300 rounded-sm '>Contact</Link>   </motion.div>
-
-                <motion.div initial={{ x: 10, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{ duration: 0.5, delay: 0.7 }}>
-                    <Link href='/About' className='px-1 focus:text-green-400 focus:shadow-md focus:shadow-green-400 hover:shadow-md  hover:shadow-orange-300 rounded-sm
-                 '>About</Link> </motion.div>
-
-            </div>
-        </motion.div>
-    )
-}
 
 export default Navbar

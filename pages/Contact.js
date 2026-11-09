@@ -1,43 +1,83 @@
+
 import Social from '@/components/Social'
 import Link from 'next/link'
-import React from 'react'
 import { motion } from 'framer-motion'
+
 const Contact = () => {
     return (
-
-        <motion.div initial={{ y: 10, opacity: 0 }}
+        <motion.div
+            initial={{ y: 10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.7, delay: 0.4 }} className='flex md:my-20 my-8'>
-            <div className=' md:w-3/4 w-96 font-serif text-white '>
-                <div>
-                    <div className='md:w-3/4 text-center'>
-                        <h1 className=' text-3xl font-semibold'>Get In Touch</h1>
-                    </div>
-                    <div className='md:w-3/4  text-center ml-4 md:mt-4 mt-2'>
-                        <p>Although, I'm currently looking for new opportunities, my inbox is always open. whether you have any question or just want to say hi, I'll try to get back to you as soon as possible.</p>
-                    </div>
-                    <div className='ml-4 md:w-3/4 md:mt-4 mt-6 flex justify-between text-center'>
-                        <div>
-                            <p>Call & Whats'up:-</p>
-                            <p>9817530061</p>
-                        </div>
-                        <div>
-                            <p>Email:-</p>
-                            <p>pks28697@gmail.com</p>
-                        </div>
-                    </div>
+            transition={{ duration: 0.7, delay: 0.4 }}
+            className='w-full max-w-full flex flex-col md:flex-row items-start gap-8 md:gap-6 px-4 md:px-8 my-10 md:my-20'
+        >
+
+            {/* Contact Content */}
+            <div className='w-full md:flex-1 min-w-0 font-serif text-white'>
+
+                <div className='w-full md:w-3/4'>
+
+                    <h1 className='text-3xl font-semibold text-center'>
+                        Get In Touch
+                    </h1>
+
+                    <p className='text-center mt-4 leading-relaxed text-slate-300'>
+                        I'm always open to connecting with people, discussing
+                        technology, sharing ideas, or exploring opportunities.
+                        Whether you have a question, a project idea, or just
+                        want to say hello, feel free to reach out.
+                    </p>
+
                 </div>
 
-                <div className='md:w-3/4 my-6 text-center'>
-                    <Link href='mailto:pks28697@gmail.com' className='px-2 py-1 rounded-sm shadow-sm shadow-orange-300 hover:shadow-orange-400' >
-                        Say hello
+                {/* Contact Details */}
+                <div className='w-full md:w-3/4 mt-8 flex flex-col sm:flex-row justify-between gap-6 text-center'>
+
+                    <div>
+                        <p className='text-lg font-semibold'>
+                            Call & WhatsApp
+                        </p>
+
+                        <Link
+                            href='tel:+919817530061'
+                            className='text-slate-300 hover:text-orange-400'
+                        >
+                            +91 98175 30061
+                        </Link>
+                    </div>
+
+                    <div>
+                        <p className='text-lg font-semibold'>
+                            Email
+                        </p>
+
+                        <Link
+                            href='mailto:pks28697@gmail.com'
+                            className='text-slate-300 hover:text-orange-400 break-all'
+                        >
+                            pks28697@gmail.com
+                        </Link>
+                    </div>
+
+                </div>
+
+                {/* Say Hello Button */}
+                <div className='w-full md:w-3/4 my-8 text-center'>
+                    <Link
+                        href='mailto:pks28697@gmail.com'
+                        className='inline-block px-4 py-2 rounded-sm shadow-md shadow-orange-300 hover:shadow-orange-400 hover:text-orange-300 transition-all'
+                    >
+                        Say Hello
                     </Link>
                 </div>
 
             </div>
-            <div className='w-1/4 md:mt-0 mt-1 flex justify-end mr-4'>
+
+            {/* Social Links */}
+            <div className='w-full md:w-auto flex justify-center md:justify-end md:mt-16'>
                 <Social />
             </div>
+
         </motion.div>
     )
 }

@@ -1,94 +1,196 @@
+
 import Social from '@/components/Social'
 import Image from 'next/image'
-import React from 'react'
 import { motion } from 'framer-motion'
-// import { AiOutlineLinkedin, AiOutlineGithub, AiOutlineInstagram, AiOutlineFacebook } from 'react-icons/ai'
-
 
 const About = () => {
+    const infrastructureSkills = [
+        'VMware vSphere',
+        'Nutanix Prism',
+        'Linux / RHEL',
+        'Backup Operations',
+        'Storage',
+        'Data Center Operations'
+    ]
+
+    const developmentSkills = [
+        'HTML5',
+        'JavaScript',
+        'React.js',
+        'Next.js',
+        'Node.js',
+        'Express.js',
+        'MongoDB',
+        'Tailwind CSS'
+    ]
+
     return (
-
-        <motion.div initial={{ y: 10, opacity: 0 }}
+        <motion.div
+            initial={{ y: 10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.7, delay: 0.4 }} >
-            <div className='md:flex  md:ml-14 lg:ml-14 ml-10 md:my-20  my-8 '>
-                <div className='md:w-3/5 text-white '>
-                    <div>
-                        <h1 className='font-serif font-semibold text-xl mb-4'>About Me</h1>
-                        <p className='font-sans  md:w-3/4 w-72 capitalize '>i am pradeep kumar a <u>( B.Tech )</u> computer science engineer.<br />Degree i have completed from <span className='font-sans italic ml-1'>   guru jambheshwar university of science & technology</span>, Hisar ( HARYANA ) india in 2021. </p>
+            transition={{ duration: 0.7, delay: 0.4 }}
+            className="w-full min-h-screen max-w-full box-border flex flex-col px-4 md:px-6 mt-10 md:mt-16"
+        >
 
-                        <p className='mt-4 mr-2 font-sans'>since 2022, i'm working in this field, i get some up & down experiences & i get that sometimes it  gives more responsibility & sometimes it's like a fun, specially when you take the challenges. i think playing with code is an incredible satisfaction for any developers.</p>
-                    </div>
-                    <div className='hover:scale-105 hover:duration-500 w-fit'>
-                        <h1 className='font-sans font-medium text-md mt-12 capitalize'>technology that, i have been working with recently.</h1>
-                        <div className='w-56 flex justify-between font-serif capitalize text-md j mt-4'>
-                            <div>
-                                <p>html5</p>
-                                <p>next js</p>
-                                <p>react js</p>
-                                <p>javaScript</p>
-                            </div>
+            {/* About & Profile */}
+            <div className='w-full flex flex-col md:flex-row gap-8 md:gap-6 px-1 md:px-4 my-6 md:my-10'>
 
-                            <div>
-                                <p>node js</p>
-                                <p>mongo DB</p>
-                                <p>express js</p>
-                                <p>tailwindcss</p>
-                            </div>
+                {/* About Content */}
+                <div className='w-full md:w-3/5 min-w-0 text-white'>
 
+                    <h1 className='font-serif font-semibold text-2xl mb-5'>
+                        About Me
+                    </h1>
+
+                    <p className='font-sans leading-relaxed text-justify'>
+                        I am Pradeep Kumar, a B.Tech Computer Science and
+                        Engineering graduate from Guru Jambheshwar University
+                        of Science & Technology, Hisar, Haryana. I completed
+                        my degree in 2021.
+                    </p>
+
+                    <p className='mt-4 font-sans leading-relaxed text-justify'>
+                        Currently, I am working as a Data Center Engineer
+                        at 3i Infotech, in Infrastructure Services, deployed
+                        at the HPCL client site in Mumbai. My work involves
+                        Data Center Operations, Virtualization, Backup
+                        Operations, Storage and Infrastructure Monitoring.
+                    </p>
+
+                    <p className='mt-4 font-sans leading-relaxed text-justify'>
+                        I also have a background in web development and
+                        enjoy building projects using modern JavaScript
+                        technologies. I believe in continuous learning,
+                        exploring new technologies and taking on challenges
+                        that help me grow professionally.
+                    </p>
+
+                    {/* Infrastructure Skills */}
+                    <div className='mt-10'>
+                        <h2 className='font-sans font-medium text-lg mb-4'>
+                            Infrastructure Technologies
+                        </h2>
+
+                        <div className='flex flex-wrap gap-3'>
+                            {infrastructureSkills.map((skill) => (
+                                <span
+                                    key={skill}
+                                    className='px-3 py-2 bg-black rounded-sm shadow-sm shadow-orange-300 text-sm'
+                                >
+                                    {skill}
+                                </span>
+                            ))}
                         </div>
                     </div>
+
+                    {/* Development Skills */}
+                    <div className='mt-8'>
+                        <h2 className='font-sans font-medium text-lg mb-4'>
+                            Web Development Technologies
+                        </h2>
+
+                        <div className='flex flex-wrap gap-3'>
+                            {developmentSkills.map((skill) => (
+                                <span
+                                    key={skill}
+                                    className='px-3 py-2 bg-black rounded-sm shadow-sm shadow-orange-300 text-sm'
+                                >
+                                    {skill}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+
                 </div>
 
+                {/* Profile Image & Social Links */}
+                <div className='w-full md:w-2/5 flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-between gap-6 mt-4 md:mt-14'>
 
-                <div className='md:w-2/5 w-auto flex justify-between text-white mt-6 md:mt-0 md:mx-4'>
-                    <div className=' w-48 h-48  rounded-md p-0.5 bg-orange-300'>
-                        <Image src='/pks.png' width={200} height={100} alt='pic' />
+                    <div className='w-48 h-48 shrink-0 rounded-md p-1 bg-orange-300'>
+                        <Image
+                            src='/pks.png'
+                            width={200}
+                            height={200}
+                            alt='Pradeep Kumar'
+                            className='w-full h-full object-cover rounded-sm'
+                        />
                     </div>
-                    <div>
+
+                    <div className='shrink-0'>
                         <Social />
                     </div>
-                </div>
-            </div>
-
-            <div className='md:ml-14 lg:ml-14 ml-10 md:my-20 capitalize font-serif text-white'>
-                <h1 className='text-lg font-semibold mb-4'>languages known :-</h1>
-
-                <div className='w-64 '>
-                    <div className='gap-6 flex font-semibold mb-2'>
-                        <div>hindi</div>
-                        <div>english</div>
-                        <div>nepali</div>
-                    </div>
-                    <hr className='w-52' />
-                    <div className='gap-10 flex'>
-                        <div>read</div>
-                        <div>read</div>
-                        <div>read</div>
-                    </div>
-                    <div className='gap-9 flex'>
-                        <div>write</div>
-                        <div>write</div>
-                        <div>no</div>
-                    </div>
-                    <div className='gap-8 flex'>
-                        <div>speak</div>
-                        <div>speak</div>
-                        <div>speak</div>
-                    </div>
-
 
                 </div>
-            </div>
-            <hr className='my-2' />
-            <div className='md:ml-14 lg:ml-14 ml-10 md:my-20 mb-10 mt-4 capitalize font-serif text-white '>
-                <h1 className='text-lg font-semibold mb-2'>hobbies :-</h1>
-                <p>1. poetry writing</p>
-                <p>2. playing chess</p>
+
             </div>
 
-        </motion.div >
+            {/* Languages */}
+            <div className='w-full px-1 md:px-4 my-8 capitalize font-serif text-white'>
 
+                <h2 className='text-xl font-semibold mb-5'>
+                    Languages Known
+                </h2>
+
+                <div className='max-w-xl overflow-x-auto'>
+                    <table className='w-full text-sm text-center'>
+                        <thead>
+                            <tr className='border-b border-slate-500'>
+                                <th className='py-3 text-left'>Language</th>
+                                <th className='py-3'>Read</th>
+                                <th className='py-3'>Write</th>
+                                <th className='py-3'>Speak</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr className='border-b border-slate-800'>
+                                <td className='py-3 text-left'>Hindi</td>
+                                <td>✓</td>
+                                <td>✓</td>
+                                <td>✓</td>
+                            </tr>
+
+                            <tr className='border-b border-slate-800'>
+                                <td className='py-3 text-left'>English</td>
+                                <td>✓</td>
+                                <td>✓</td>
+                                <td>✓</td>
+                            </tr>
+
+                            <tr>
+                                <td className='py-3 text-left'>Nepali</td>
+                                <td>✓</td>
+                                <td>—</td>
+                                <td>✓</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+            <hr className='my-6 border-slate-700' />
+
+            {/* Hobbies */}
+            <div className='w-full px-1 md:px-4 my-8 mb-12 capitalize font-serif text-white'>
+
+                <h2 className='text-xl font-semibold mb-4'>
+                    Hobbies & Interests
+                </h2>
+
+                <div className='flex flex-wrap gap-4'>
+                    <p className='bg-black px-4 py-2 rounded-sm shadow-sm shadow-orange-300'>
+                        Poetry Writing
+                    </p>
+
+                    <p className='bg-black px-4 py-2 rounded-sm shadow-sm shadow-orange-300'>
+                        Playing Chess
+                    </p>
+                </div>
+
+            </div>
+
+        </motion.div>
     )
 }
 
